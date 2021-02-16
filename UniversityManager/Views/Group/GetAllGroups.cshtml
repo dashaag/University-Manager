@@ -6,12 +6,6 @@
 
 <h2>GetAllGroups</h2>
 
-<p>
-    @Html.ActionLink("Create New", "AddGroup")
-</p>
-<p>
-    @Html.ActionLink("Send Request", "SendRequest")
-</p>
 <table class="table">
     <tr>
         <th>
@@ -26,9 +20,7 @@
             @Html.DisplayFor(modelItem => item.Name)
         </td>
         <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Id }) |
-            @Html.ActionLink("SendRequest", "SendRequest", new { groupName=item.Name }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Id })
+            @Html.ActionLink("SendRequest", "SendRequest", new { groupName = item.Name }) 
         </td>
     </tr>
 }

@@ -37,7 +37,7 @@ namespace UniversityManager.Controllers
             return View(groups);
         }
       
-        [HttpPost]
+        
         public ActionResult SendRequest(string groupName)
         {
             var user = _context.Users.Find(User.Identity.GetUserId());
@@ -56,7 +56,7 @@ namespace UniversityManager.Controllers
             return View();
         }
         [HttpPost]
-        [Authorize(Roles = "Admin")]
+
         public ActionResult AddGroup(GroupViewModel model)
         {
             if(model != null)
